@@ -5,6 +5,6 @@ body {
 
 .textbox {
   border-style: dotted;
-  border-color: black;
+  border-color: rgba(0,0,0,100);
   border-width: 2px;
 }
