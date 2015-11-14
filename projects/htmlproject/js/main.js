@@ -1,7 +1,9 @@
 window.onload = main;
 function main() {
-  var p = addNewElement("p", "player");
-  p.id = "player";
+  var p = addNewElement("p id=\"player\"", "player");
+  var a = addNewElement("a", ""
+  var b = addNewElement("p", 
+  b.id = "back";
   
   setInterval(mainLoop, 1000/30);
   
