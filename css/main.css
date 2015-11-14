@@ -26,13 +26,14 @@ body {
 }
 
 #current {
-  font-family: 'Verdana', 'Arial', 'Sans-Serif';
+  font-family:'Helvetica', 'Arial', 'Sans-Serif';
   font-weight: 950;
 }
 
 #non-current {
-  font-family: 'Verdana', 'Arial', 'Sans-Serif';
+  font-family:'Helvetica', 'Arial', 'Sans-Serif';
   color: rgb(190,190,190);
+  text-decoration: none;
 }
 
 .textbox a {
