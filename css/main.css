@@ -31,8 +31,7 @@ p, h1 {
   font-weight: bold;
 }
 
-.title a {
-  background-color: black;
+#title a {
   color: rgb(190,190,190);
   text-decoration: none;
 }
