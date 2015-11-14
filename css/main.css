@@ -25,7 +25,7 @@ body {
   margin-bottom: 25px;
 }
 
-.current {
+#current {
   font-family:'Helvetica', 'Arial', 'Sans-Serif';
   font-weight: 850;
 }
