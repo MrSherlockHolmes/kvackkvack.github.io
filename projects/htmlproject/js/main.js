@@ -34,8 +34,8 @@ function main() {
   function posElement(elem, x, y, center) {
     elem.style.position = "absolute";
     if(center) {
-      elem.style.left = x+elem.offsetWidth/2;
-      elem.style.top = y+elem.offsetHeight/2;
+      elem.style.left = x-elem.offsetWidth/2;
+      elem.style.top = y-elem.offsetHeight/2;
     } else {
       elem.style.left = x;
       elem.style.top = y;
