@@ -26,9 +26,15 @@ body {
 }
 
 #current {
-  font-family:'Helvetica', 'Arial', 'Sans-Serif';
-  font-weight: 850;
-  color: red;
+  font-family:'Verdana'', 'Arial', 'Sans-Serif';
+  font-weight: 950;
+}
+
+#non-current {
+  font-family:'Verdana'', 'Arial', 'Sans-Serif';
+  text-decoration: none;
+  color: rgb(190,190,190);
+  font-style: normal;
 }
 
 a {
