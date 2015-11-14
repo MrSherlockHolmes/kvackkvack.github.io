@@ -15,7 +15,7 @@ p, h1 {
   box-shadow: 2px 2px 5px rgba(200,200,200,150);
 }
 
-.prokjectbox {
+.projectbox {
   border-style: dotted;
   border-color: rgb(170,170,170);
   border-width: 2px;
@@ -24,7 +24,7 @@ p, h1 {
   box-shadow: 3px 3px 5px rgba(200,200,200,160);
 }
 
-.textbox * {
+.textbox *, .projectbox * {
   margin: 5px auto;
   width: 75%;
 }
