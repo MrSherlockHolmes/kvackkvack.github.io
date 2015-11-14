@@ -39,6 +39,7 @@ function main() {
   
   function mainLoop() {
     getMousePos();
+    console.log(p.offsetWidth + " : " + p.offsetHeight);
     posElement(p,mouseX,mouseY);
   }
   
