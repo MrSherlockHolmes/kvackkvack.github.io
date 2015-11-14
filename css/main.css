@@ -25,7 +25,18 @@ body {
   margin-bottom: 25px;
 }
 
+.current {
+  font-family:'Helvetica', 'Arial', 'Sans-Serif';
+  font-weight: 850;
+}
+
 a {
   text-decoration: none;
   color: rgb(210,155,110);
+  font-style: italic;
 }
+
+a:hover {
+  text-decoration: underline;
+}
+
