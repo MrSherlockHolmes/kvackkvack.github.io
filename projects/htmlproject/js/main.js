@@ -1,10 +1,6 @@
 window.onload = main;
 function main() {
-  var p = document.createElement("p");
-  p.id = 'player'
-  p.appendChild(document.createTextNode("player"));
-  document.body.appendChild(p);
-  p = document.getElementById('player');
+  createElement("p", "player", "player");
   
   var eventDoc, doc, body, mouseX, mouseY;
   document.onmousemove = function() {
@@ -21,6 +17,14 @@ function main() {
       (doc && doc.clientTop  || body && body.clientTop  || 0 );
 
   }
-  p.position(mouseX,mouseY);
+  
+  var el;
+  function createElement(elem, content, id, class) {
+    el = document.createElement(elem);
+    el.id = id||null;
+    el.class = class||null;
+    el.appendChild(document.createTextNode(content));
+    document.body.appendChild(el);
+  }
   
 }
