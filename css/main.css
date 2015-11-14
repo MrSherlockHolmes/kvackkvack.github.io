@@ -5,6 +5,12 @@ body {
 
 .textbox {
   border-style: dotted;
-  border-color: rgba(0,0,0,100);
-  border-width: 2px;
+  border-color: rgb(200,200,200);
+  border-width: 1px;
+}
+
+.textbox * {
+  margin: 5px auto;
+  width: 75%;
+  font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
