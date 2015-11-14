@@ -1,1 +1,2 @@
-console.log("JavaScript works?");
+var btn = document.createElement("BUTTON");
+document.body.appendChild(btn);
