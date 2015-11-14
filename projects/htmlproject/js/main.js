@@ -3,7 +3,7 @@ function main() {
   var p = document.createElement("p");
   p.id = 'player'
   p.appendChild(document.createTextNode("player"));
-  document.body.appendChild(player);
+  document.body.appendChild(p);
   p = document.getElementById('player');
   
   var eventDoc, doc, body;
