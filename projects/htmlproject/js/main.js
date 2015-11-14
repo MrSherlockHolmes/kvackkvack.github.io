@@ -1,1 +1,4 @@
-console.log(document.body);
+window.onload = main;
+function main() {
+  console.log(document.body);
+}
