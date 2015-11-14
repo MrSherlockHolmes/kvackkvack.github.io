@@ -35,7 +35,7 @@ function main() {
     elem.style.position = "absolute";
     if(center) {
       elem.style.left = x-elem.offsetWidth/2;
-      elem.style.top = y;
+      elem.style.top = y-elem.offsetHeight;
     } else {
       elem.style.left = x;
       elem.style.top = y;
