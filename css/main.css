@@ -24,6 +24,11 @@ p, h1 {
   box-shadow: 3px 3px 5px rgba(200,200,200,160);
 }
 
+.version {
+  color: rgb(120,120,120);
+  font-size: 40%;
+}
+
 .textbox *, .projectbox * {
   margin: 5px auto;
   width: 75%;
