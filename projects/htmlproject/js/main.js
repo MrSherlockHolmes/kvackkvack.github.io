@@ -2,6 +2,10 @@ window.onload = main;
 function main() {
   var p = addNewElement("p", "player");
   p.id = "player";
+  p.color = "red";
+  
+  addNewElement("a", "<< back");
+  a.href = "/projects";
   
   setInterval(mainLoop, 1000/30);
   
