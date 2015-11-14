@@ -58,7 +58,7 @@ p, h1 {
   text-decoration: underline;
 }
 
-.projectbox h1, .textbox h1 {
+.projectbox h1, .textbox h1, .projectbox a {
   color: rgb(65,65,65);
   text-decoration: none;
 }
