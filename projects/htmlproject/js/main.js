@@ -31,13 +31,15 @@ function main() {
     return el;
   }
   
+  function posElement(elem, x, y) {
+    elem.style.position = "absolute";
+    elem.style.left = x;
+    elem.style.top = y;
+  }
+  
   function mainLoop() {
-    p.style.color = "blue";
-    p.style.position = "absolute";
     getMousePos();
-    console.log(mouseX + " : " + mouseY);
-    p.style.left = mouseX; 
-    p.style.top = mouseY;
+    posElement(p,mouseX,mouseY);
   }
   
 }
