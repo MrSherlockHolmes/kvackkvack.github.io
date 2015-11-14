@@ -29,12 +29,16 @@ p, h1 {
   width: 75%;
 }
 
-.textbox > :first-child {
+.textbox > :first-child, .projectbox > :first-child {
   margin-top: 25px;
 }
 
-.textbox > :last-child {
+.textbox > :last-child, .projectbox > :last-child {
   margin-bottom: 25px;
+}
+
+.projectbox p {
+  color: rgb(80,80,80);
 }
 
 #current {
@@ -55,4 +59,9 @@ p, h1 {
 
 .textbox a:hover {
   text-decoration: underline;
+}
+
+.projectbox a {
+  color: rgb(40,40,40);
+  text-decoration: none;
 }
