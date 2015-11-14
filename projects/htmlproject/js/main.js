@@ -20,7 +20,9 @@ function main() {
   }
   p.style.color = "red";
   p.style.position = "absolute";
-  p.style.left = mouseX; p.style.top = mouseY;
+  console.log(mouseX + " : " + mouseY);
+  p.style.left = mouseX; 
+  p.style.top = mouseY;
   
   var el;
   function addNewElement(elem, content) {
