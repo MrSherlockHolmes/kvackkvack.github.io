@@ -27,7 +27,7 @@ p, h1 {
 }
 
 .textbox > :first-child, .projectbox > :first-child {
-  margin-top: 100px;
+  margin-top: 25px;
 }
 
 .textbox > :last-child, .projectbox > :last-child {
