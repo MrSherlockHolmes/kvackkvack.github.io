@@ -2,7 +2,6 @@ window.onload = main;
 function main() {
   var p = addNewElement("p", "player");
   p.id = "player";
-  p.color = "red";
   
   setInterval(mainLoop, 1000/30);
   
@@ -45,7 +44,7 @@ function main() {
   
   function mainLoop() {
     getMousePos();
-    posElement(p,mouseX,mouseY,true);
+    posElement(p,mouseX,Math.max(mouseY, 30), true);
   }
   
 }
