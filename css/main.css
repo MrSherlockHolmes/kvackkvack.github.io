@@ -11,7 +11,7 @@ body {
   margin-bottom: 35px;
 }
 
-p, h1 {
+.textbox * {
   margin: 5px auto;
   width: 75%;
   font-family:'Helvetica', 'Arial', 'Sans-Serif';
@@ -25,12 +25,12 @@ p, h1 {
   margin-bottom: 25px;
 }
 
-#current {
+#current !important {
   font-family:'Verdana'', 'Arial', 'Sans-Serif';
   font-weight: 950;
 }
 
-#non-current {
+#non-current !important {
   font-family:'Verdana'', 'Arial', 'Sans-Serif';
   text-decoration: none;
   color: rgb(190,190,190);
