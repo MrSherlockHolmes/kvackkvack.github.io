@@ -11,6 +11,8 @@ body {
 
 .textbox * {
   margin: 5px auto;
+  margin-top: 25%;
+  margin-bottom: 25%;
   width: 75%;
   font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
