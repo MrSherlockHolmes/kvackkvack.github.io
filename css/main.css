@@ -37,10 +37,12 @@ p, h1 {
 
 .textbox > :first-child, .projectbox > :first-child {
   margin-top: 25px;
+  color: red;
 }
 
 .textbox > :last-child, .projectbox > :last-child {
   margin-bottom: 25px;
+  color: red;
 }
 
 .projectbox p {
