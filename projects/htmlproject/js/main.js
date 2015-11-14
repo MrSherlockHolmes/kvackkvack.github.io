@@ -4,8 +4,9 @@ function main() {
   p.id = "player";
   p.color = "red";
   
-  addNewElement("a", "<< back");
+  var a = addNewElement("a", "<< back");
   a.href = "/projects";
+  a.id = "back";
   
   setInterval(mainLoop, 1000/30);
   
