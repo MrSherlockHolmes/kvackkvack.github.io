@@ -44,7 +44,7 @@ function main() {
   
   function mainLoop() {
     getMousePos();
-    posElement(p,mouseX,Math.max(mouseY, 30), true);
+    posElement(p,mouseX,Math.max(mouseY, 38), true);
   }
   
 }
