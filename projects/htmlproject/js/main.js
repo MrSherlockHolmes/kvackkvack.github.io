@@ -6,17 +6,17 @@ function main() {
   document.body.appendChild(p);
   p = document.getElementById('player');
   
-  var eventDoc, doc, body;
+  var eventDoc, doc, body, mouseX, mouseY;
   document.onmousemove = function() {
     event = event || window.event;
     eventDoc = (event.target && event.target.ownerDocument) || document;
     doc = eventDoc.documentElement;
     body = eventDoc.body;
     
-    mouseXPos = event.clientX +
+    mouseX = event.clientX +
       (doc && doc.scrollLeft || body && body.scrollLeft || 0) -
       (doc && doc.clientLeft || body && body.clientLeft || 0);
-    mouseYPos= event.clientY +
+    mouseY = event.clientY +
       (doc && doc.scrollTop  || body && body.scrollTop  || 0) -
       (doc && doc.clientTop  || body && body.clientTop  || 0 );
 
