@@ -1,6 +1,6 @@
 window.onload = main;
 function main() {
-  createElement("p", "player", "player");
+  addNewElement("p", "player");
   
   var eventDoc, doc, body, mouseX, mouseY;
   document.onmousemove = function() {
@@ -19,12 +19,13 @@ function main() {
   }
   
   var el;
-  function createElement(elem, content, id, class) {
+  function addNewElement(elem, content) {
     el = document.createElement(elem);
     el.id = id||null;
     el.class = class||null;
     el.appendChild(document.createTextNode(content));
     document.body.appendChild(el);
+    return el;
   }
   
 }
