@@ -28,6 +28,7 @@ body {
 #current {
   font-family:'Helvetica', 'Arial', 'Sans-Serif';
   font-weight: 850;
+  color: red;
 }
 
 a {
