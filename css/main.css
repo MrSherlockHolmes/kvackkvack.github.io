@@ -17,4 +17,5 @@ body {
 
 .textbox > :first-child, .textbox > :last-child {
   margin-top: 15px;
+  color: red;
 }
