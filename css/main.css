@@ -3,6 +3,9 @@ body {
   width: 60%;
 }
 
+p, h1 {
+  font-family:'Helvetica', 'Arial', 'Sans-Serif';
+}
 .textbox {
   border-style: dotted;
   border-color: rgb(190,190,190);
@@ -14,7 +17,6 @@ body {
 .textbox * {
   margin: 5px auto;
   width: 75%;
-  font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
 
 .textbox > :first-child {
@@ -26,12 +28,11 @@ body {
 }
 
 #current {
-  font-family:'Helvetica', 'Arial', 'Sans-Serif';
-  font-weight: 950;
+  font-weight: 900;
+  color: rgb(220,220,220);
 }
 
-#non-current {
-  font-family:'Helvetica', 'Arial', 'Sans-Serif';
+.title a {
   color: rgb(190,190,190);
   text-decoration: none;
 }
