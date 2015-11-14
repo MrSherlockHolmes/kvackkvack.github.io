@@ -1,12 +1,14 @@
 body {
   margin: 60px auto;
+  margin-bottom: 20px auto;
   width: 60%;
 }
 
 .textbox {
   border-style: dotted;
-  border-color: rgb(200,200,200);
+  border-color: rgb(190,190,190);
   border-width: 1px;
+  background-color: rgb(240,240,240);
 }
 
 .textbox * {
