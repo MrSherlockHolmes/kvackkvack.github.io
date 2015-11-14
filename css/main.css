@@ -7,22 +7,13 @@ p, h1 {
   font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
 
-.textbox  {
+.textbox, .projectbox  {
   border-style: dotted;
   border-color: rgb(190,190,190);
   border-width: 1px;
   background-color: rgb(240,240,240);
-  margin-bottom: 60px;
+  margin-bottom: 50px;§
   box-shadow: 2px 2px 5px rgba(200,200,200,150);
-}
-
-.projectbox {
-  border-style: dotted;
-  border-color: rgb(190,190,190);
-  border-width: 1px;
-  background-color: rgb(240,240,240);
-  margin-bottom: 55px;
-  box-shadow: 2px 2px 5px rgba(200,200,200,160);
 }
 
 .version {
@@ -46,7 +37,7 @@ p, h1 {
 }
 
 .projectbox p {
-  color: rgb(80,80,80);
+  color: rgb(120,120,120);
 }
 
 #current {
@@ -70,6 +61,6 @@ p, h1 {
 }
 
 .projectbox a {
-  color: rgb(40,40,40);
+  color: rgb(65,65,65);
   text-decoration: none;
 }
