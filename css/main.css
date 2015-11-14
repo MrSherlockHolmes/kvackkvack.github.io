@@ -28,11 +28,11 @@ p, h1 {
 }
 
 #current {
-  font-weight: 900;
-  color: rgb(220,220,220);
+  font-weight: bold;
 }
 
 .title a {
+  background-color: black;
   color: rgb(190,190,190);
   text-decoration: none;
 }
