@@ -21,8 +21,6 @@ function main() {
   var el;
   function addNewElement(elem, content) {
     el = document.createElement(elem);
-    el.id = id||null;
-    el.class = class||null;
     el.appendChild(document.createTextNode(content));
     document.body.appendChild(el);
     return el;
