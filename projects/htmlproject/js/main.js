@@ -1,6 +1,7 @@
 window.onload = main;
 function main() {
-  addNewElement("p", "player");
+  var p = addNewElement("p", "player");
+  p.id = "player";
   
   var eventDoc, doc, body, mouseX, mouseY;
   document.onmousemove = function() {
@@ -17,6 +18,8 @@ function main() {
       (doc && doc.clientTop  || body && body.clientTop  || 0 );
 
   }
+  p.style.position = "absolute";
+  p.style.left = mouseX; p.style.top = mouseY;
   
   var el;
   function addNewElement(elem, content) {
