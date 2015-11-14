@@ -7,12 +7,12 @@ body {
   border-style: dotted;
   border-color: rgb(200,200,200);
   border-width: 1px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .textbox * {
   margin: 5px auto;
-  margin-top: 25%;
-  margin-bottom: 25%;
   width: 75%;
   font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
