@@ -15,7 +15,10 @@ body {
   font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
 
-.textbox > :first-child, .textbox > :last-child {
-  margin-top: 15px;
-  color: red;
+.textbox > :first-child {
+  margin-top: 25px;
+}
+
+.textbox > :last-child {
+  margin-bottom: 25px;
 }
