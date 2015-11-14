@@ -31,16 +31,20 @@ function main() {
     return el;
   }
   
-  function posElement(elem, x, y) {
+  function posElement(elem, x, y, center) {
     elem.style.position = "absolute";
-    elem.style.left = x;
-    elem.style.top = y;
+    if(center) {
+      elem.style.left = x+elem.offsetWidth/2;
+      elem.style.top = y+elem.offsetHeight/2;
+    } else {
+      elem.style.left = x;
+      elem.style.top = y;
+    }
   }
   
   function mainLoop() {
     getMousePos();
-    console.log(p.offsetWidth + " : " + p.offsetHeight);
-    posElement(p,mouseX,mouseY);
+    posElement(p,mouseX,mouseY,true);
   }
   
 }
