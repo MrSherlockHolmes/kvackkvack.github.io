@@ -8,7 +8,7 @@ body {
   border-color: rgb(190,190,190);
   border-width: 1px;
   background-color: rgb(240,240,240);
-  margin-bottom: 25px;
+  margin-bottom: 35px;
 }
 
 .textbox * {
@@ -23,4 +23,13 @@ body {
 
 .textbox > :last-child {
   margin-bottom: 25px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(240,200,180);
+}
+
+a:hover {
+  
 }
