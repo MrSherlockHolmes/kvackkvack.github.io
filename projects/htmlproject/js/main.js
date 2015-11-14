@@ -18,6 +18,7 @@ function main() {
       (doc && doc.clientTop  || body && body.clientTop  || 0 );
 
   }
+  p.style.color = "red";
   p.style.position = "absolute";
   p.style.left = mouseX; p.style.top = mouseY;
   
