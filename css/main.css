@@ -25,25 +25,23 @@ body {
   margin-bottom: 25px;
 }
 
-#current !important {
-  font-family:'Verdana'', 'Arial', 'Sans-Serif';
+#current {
+  font-family: 'Verdana', 'Arial', 'Sans-Serif';
   font-weight: 950;
 }
 
-#non-current !important {
-  font-family:'Verdana'', 'Arial', 'Sans-Serif';
-  text-decoration: none;
+#non-current {
+  font-family: 'Verdana', 'Arial', 'Sans-Serif';
   color: rgb(190,190,190);
-  font-style: normal;
 }
 
-a {
+.textbox a {
   text-decoration: none;
   color: rgb(210,155,110);
   font-style: italic;
 }
 
-a:hover {
+.textbox a:hover {
   text-decoration: underline;
 }
 
