@@ -1,5 +1,6 @@
 window.onload = main;
 function main() {
-  console.log("hej");
-  console.log(document.body);
+  var player = document.createElement("p");
+  player.appendChild(document.createTextNode("player"));
+  document.body.appendChild(player);
 }
