@@ -46,7 +46,7 @@ function fadeIn(element, finished) {
 }
 
 function change(elemindx, contents, indx) {
-  changeElem = $('.text-content:nth-of-type(1)')
+  changeElem = $('.text:eq(' + elemindx + ')')
   //changeElem = document.getElementsByClassName('text-content')[elemindx];
   changeElem.fadeOut(400, function() {
     changeElem.replaceWith(contents[indx]);
