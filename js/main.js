@@ -4,6 +4,7 @@ var current = 0;
 var change, replace;
 var op, timer;
 var maintimer;
+var elements;
 
 maintimer = setInterval(changeContents, 1000*6)
 
@@ -14,6 +15,14 @@ function changeContents() {
   }
   
   change(0, content[0], current);
+  
+  document.getElementsByClassName('next')[0].onclick = function() {
+    console.log("next!");
+  }
+  
+  document.getElementsByClassName('prev')[0].onclick = function() {
+    console.log("prev!");
+  }
   
   function change(elemindx, contents, indx) {
     change = document.getElementsByClassName('text-content')[elemindx];
