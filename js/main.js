@@ -25,10 +25,10 @@ function changeContents() {
         change = document.getElementsByClassName('indexnav')[elemindx];
         change.innerHTML = "<span class=\"prev\"> < </span>" + String(indx+1) + "/" + String(contents.length) + "<span class=\"next\"> > </span>";
         document.getElementsByClassName('next')[elemindx].onclick = function() {
-          next();
+          next(elemindx);
         }
         document.getElementsByClassName('prev')[elemindx].onclick = function() {
-          prev();
+          prev(elemindx);
         }
       })
   });
@@ -62,28 +62,28 @@ function changeContents() {
 
 window.onload = function() {
   document.getElementsByClassName('next')[0].onclick = function() {
-    next();
+    next(0);
   }
     
   document.getElementsByClassName('prev')[0].onclick = function() {
-    prev();
+    prev(0);
   }
 }
 
-function next() {
+function next(indx) {
   console.log("next!");
   current++;
   if(current>1) {
     current=0;
   }
-  change(elemindx, content[elemindx], current);
+  change(indx, content[indx], current);
 }
 
-function prev() {
+function prev(indx) {
   console.log("prev!");
   current--;
   if(current<0) {
     current=1;
   }
-  change(elemindx, content[elemindx], current);
+  change(indx, content[indx], current);
 }
