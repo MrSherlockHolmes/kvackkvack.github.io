@@ -37,15 +37,8 @@ p, h1 {
   color: rgb(120,120,120);
 }
 
-.textbox:after {
-    content:"";
-    position:absolute;
-    height:0;
-    width:0;
-    left:100%;
-    top:0;
-    border:20px solid transparent;
-    border-left: 20px solid red;
+.arrow {
+  display: inline;
 }
 
 #title #current {
