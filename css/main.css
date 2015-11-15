@@ -3,10 +3,6 @@ body {
   width: 60%;
 }
 
-.arrow {
-  margin: none;
-  width: auto;
-}
 p, h1 {
   font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
@@ -24,7 +20,9 @@ p, h1 {
   box-shadow: 2px 2px 5px rgba(200,200,200,150);
 }
 
-.arrow {
+.textbox > .arrow {
+  color: red;
+  margin: none;
   display: inline;
 }
 .version {
