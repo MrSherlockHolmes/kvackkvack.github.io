@@ -13,6 +13,10 @@ function changeContents() {
     current=0;
   }
   change = document.getElementById('hi');
+  console.log(change.childNodes.length);
+  for(i=0;i<change.childNodes.length;i++) {
+    console.log(change.childNodes[i]);
+  }
   change.removeChild(change.childNodes[3]);
   change.removeChild(change.childNodes[2]);
   replace = document.createElement('p');
