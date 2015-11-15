@@ -1,6 +1,6 @@
-body {
-  /*margin: 60px auto;
-  width: 60%;*/
+.projectbox, #title, .projectbox, h1 {
+  margin: 60px auto;
+  width: 60%;
 }
 p, h1 {
   font-family:'Helvetica', 'Arial', 'Sans-Serif';
