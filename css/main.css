@@ -1,8 +1,9 @@
-.textbox > .arrow, #title, .projectbox, h1 {
+.body {
   color: red;
   margin: 60px auto;
   width: 60%;
 }
+
 p, h1 {
   font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
