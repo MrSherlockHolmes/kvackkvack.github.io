@@ -16,14 +16,6 @@ function changeContents() {
   
   change(0, content[0], current);
   
-  document.getElementsByClassName('next')[0].onclick = function() {
-    console.log("next!");
-  }
-  
-  document.getElementsByClassName('prev')[0].onclick = function() {
-    console.log("prev!");
-  }
-  
   function change(elemindx, contents, indx) {
     change = document.getElementsByClassName('text-content')[elemindx];
     fadeOut(change, function() {
@@ -59,4 +51,12 @@ function changeContents() {
       op+=0.1;
     }, 75)
   }
+}
+
+document.getElementsByClassName('next')[0].onclick = function() {
+  console.log("next!");
+}
+  
+document.getElementsByClassName('prev')[0].onclick = function() {
+  console.log("prev!");
 }
