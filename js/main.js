@@ -6,7 +6,13 @@ var op, timer;
 var maintimer;
 var elements;
 
-maintimer = setInterval(changeContents, 1000*6)
+maintimer = setInterval(function() {
+  current++;
+  if(current>1) {
+    current=0;
+  }
+  change(0, content[0], current);
+}, 1000*6)
 
 window.onload = function() {
   document.getElementsByClassName('next')[0].onclick = function() {
