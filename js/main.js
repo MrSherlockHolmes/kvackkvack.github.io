@@ -23,6 +23,12 @@ function changeContents() {
     fadeIn(change, function() {
       change = document.getElementsByClassName('indexnav')[elemindx];
       change.innerHTML = "<span class=\"prev\"> < </span>" + String(indx+1) + "/" + String(contents.length) + "<span class=\"next\"> > </span>";
+      document.getElementsByClassName('next')[elemindx].onclick = function() {
+        console.log("next!");
+      }
+      document.getElementsByClassName('prev')[elemindx].onclick = function() {
+        console.log("prev!");
+      }
     })
   });
   }
@@ -50,5 +56,15 @@ function changeContents() {
       element.style.filter = 'alpha(opacity=' + op * 100 + ")";
       op+=0.1;
     }, 75)
+  }
+}
+
+window.onload = function() {
+  document.getElementsByClassName('next')[0].onclick = function() {
+    console.log("next!");
+  }
+    
+  document.getElementsByClassName('prev')[0].onclick = function() {
+    console.log("prev!");
   }
 }
