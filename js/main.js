@@ -21,11 +21,11 @@ function mainloop() {
 }
 
 window.onload = function() {
-  $('.next').eq(elemindx).click(function() {
-    next(elemindx);
+  $('.next').eq(0).click(function() {
+    next(0);
   });
-  $('.prev').eq(elemindx).click(function() {
-    prev(elemindx);
+  $('.prev').eq(0).click(function() {
+    prev(0);
   });
 }
 
