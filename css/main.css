@@ -22,7 +22,7 @@ p, h1 {
 
 .textbox > .arrow {
   color: red;
-  margin: none;
+  margin: 0px;
   display: inline;
 }
 .version {
