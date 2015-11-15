@@ -10,6 +10,7 @@ var elements;
 maintimer = setInterval(mainloop, 1000*6)
 
 function mainloop() {
+  maintimer = setInterval(mainloop, 1000*6)
   console.log("main");
   current++;
   if(current>1) {
@@ -18,6 +19,7 @@ function mainloop() {
     current=1;
   }
   change(0, content[0], current);
+  maintimer = setInterval(mainloop, 1000*6)
 }
 
 window.onload = function() {
@@ -45,7 +47,6 @@ function next(indx) {
     current=0;
   }
   change(indx, content[indx], current);
-  maintimer = setInterval(mainloop, 1000*6)
 }
 
 function prev(indx) {
@@ -54,7 +55,6 @@ function prev(indx) {
     current=1;
   }
   change(indx, content[indx], current);
-  maintimer = setInterval(mainloop, 1000*6)
 }
 
 function resetNav(indx) {
