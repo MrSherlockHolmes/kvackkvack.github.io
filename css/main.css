@@ -38,11 +38,7 @@ p, h1 {
   color: rgb(120,120,120);
 }
 
-.textbox ::after {
-	content: ">";
-}
-
-.textbox::before {
+div::before {
 	content: "<";
 }
 #current {
