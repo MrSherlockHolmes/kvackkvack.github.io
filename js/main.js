@@ -8,16 +8,6 @@ var elements;
 
 maintimer = setInterval(changeContents, 1000*6)
 
-function changeContents() {
-  current++;
-  if(current>1) {
-    current=0;
-  }
-  
-  change(0, content[0], current);
-  
-}
-
 window.onload = function() {
   document.getElementsByClassName('next')[0].onclick = function() {
     next(0);
@@ -88,4 +78,12 @@ function prev(indx) {
     current=1;
   }
   change(indx, content[indx], current);
+}
+
+function changeContents() {
+  current++;
+  if(current>1) {
+    current=0;
+  }
+  change(0, content[0], current);
 }
