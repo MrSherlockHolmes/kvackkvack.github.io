@@ -21,15 +21,11 @@ function mainloop() {
 }
 
 window.onload = function() {
-  $('.next').eq(0).click(function() {
-    next(0);
-  });
-  $('.prev').eq(0).click(function() {
-    prev(0);
-  });
+  resetNav(0);
 }
 
 function change(elemindx, contents, indx) {
+  resetNav2(elemindx, function() {}, function() {})
   changeElem = $('.text-content').eq(elemindx);
   //changeElem = document.getElementsByClassName('text-content')[elemindx];
   changeElem.fadeOut(400, function() {
@@ -38,12 +34,7 @@ function change(elemindx, contents, indx) {
       //changeElem = document.getElementsByClassName('indexnav')[elemindx];
       changeElem = $('.indexnav').eq(elemindx);
       changeElem.replaceWith("<h3 class=\"indexnav\"><span class=\"prev\"> < </span>" + String(indx+1) + "/" + String(contents.length) + "<span class=\"next\"> > </span></h3>");
-      $('.next').eq(elemindx).click(function() {
-        next(elemindx);
-      });
-      $('.prev').eq(elemindx).click(function() {
-        prev(elemindx);
-      });
+      resetNav(elemindx)
     })
   })
 }
@@ -66,3 +57,16 @@ function prev(indx) {
   maintimer = setInterval(mainloop, 1000*6)
 }
 
+function resetNav(indx) {
+  $('.next').eq(indx).click(function() {
+    next(indx);
+  });
+  $('.prev').eq(indx).click(function() {
+    prev(indx);
+  });
+}
+
+function resetNav2(indx, next, prev) {
+  $('.next').eq(indx).click(next);
+  $('.prev').eq(indx).click(prev);
+}
