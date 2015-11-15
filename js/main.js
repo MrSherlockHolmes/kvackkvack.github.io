@@ -12,6 +12,7 @@ function changeContents() {
   if(current>1) {
     current=0;
   }
-  change.removeChild(change.childNodes[1])
+  change = document.getElementById('hi');
+  change.removeChild(change.childNodes[1]);
   
 }
