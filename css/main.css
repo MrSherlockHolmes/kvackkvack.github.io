@@ -39,7 +39,10 @@ p, h1 {
 }
 
 div::before {
-	content: "<";
+  content: "<";
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 50%;
 }
 #current {
   font-weight: 900;
