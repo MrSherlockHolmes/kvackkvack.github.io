@@ -4,7 +4,7 @@ var current = 0;
 var change, replace;
 var op, timer;
 
-setInterval(changeContents, 1000*3.5)
+setInterval(changeContents, 1000*7)
 
 function changeContents() {
   current++;
