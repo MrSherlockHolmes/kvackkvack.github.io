@@ -10,8 +10,6 @@ var elements;
 maintimer = setInterval(mainloop, 1000*6)
 
 function mainloop() {
-  maintimer = setInterval(mainloop, 1000*6)
-  console.log("main");
   current++;
   if(current>1) {
     current=0;
@@ -19,13 +17,11 @@ function mainloop() {
     current=1;
   }
   change(0, content[0], current);
-  maintimer = setInterval(mainloop, 1000*6)
 }
 
 function change(elemindx, contents, indx) {
   resetNav2(elemindx, function() {}, function() {})
   changeElem = $('.text-content').eq(elemindx);
-  //changeElem = document.getElementsByClassName('text-content')[elemindx];
   changeElem.fadeOut(400, function() {
     changeElem.text(contents[indx]);
     changeElem.fadeIn(400, function() {
