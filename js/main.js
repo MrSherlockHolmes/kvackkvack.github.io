@@ -14,7 +14,7 @@ function changeContents() {
   }
   change = document.getElementById('hi');
   change.removeChild(change.childNodes[2]);
-  replace = document.createElement('p');
+  /*replace = document.createElement('p');
   replace.appendChild(document.createTextNode(content[current]));
-  change.appendChild(replace);
+  change.appendChild(replace);*/
 }
