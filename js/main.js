@@ -18,7 +18,7 @@ function changeContents() {
     change.innerHTML = content[current];
     fadeIn(change, function() {
       change = document.getElementsByClassName('indexnav')[0];
-      change.innerHTML = "< " + current+1 + "/" + content.length + " >";
+      change.innerHTML = "< " + String(current+1) + "/" + String(content.length) + " >";
     })
   });
   
