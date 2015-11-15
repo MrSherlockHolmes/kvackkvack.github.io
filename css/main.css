@@ -61,8 +61,6 @@ p, h1, h3 {
 }
 
 .boxtitle h1 {
-  position: absolute;
-  left: 85px auto;
   background-color: rgb(230,230,230);
   font-size: 90%;
   font-weight: 700;
