@@ -49,7 +49,7 @@ function change(elemindx, contents, indx) {
   changeElem = $('.text:eq(' + elemindx + ')')
   //changeElem = document.getElementsByClassName('text-content')[elemindx];
   changeElem.fadeOut(400, function() {
-    changeElem.replaceWith(contents[indx]);
+    changeElem.text(contents[indx]));
     changeElem.fadeIn(400, function() {
       maintimer = setInterval(changeContents, 1000*6);
       //changeElem = document.getElementsByClassName('indexnav')[elemindx];
