@@ -7,10 +7,6 @@ p, h1 {
   font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
 
-body .textboxfull {
-  margin: 0px;
-  margin-bottom: 50px;
-}
 
 .textbox, .projectbox  {
   display: inline-block;
@@ -19,17 +15,14 @@ body .textboxfull {
   border-width: 1px;
   background-color: rgb(240,240,240);
   box-shadow: 2px 2px 5px rgba(200,200,200,150);
+  margin-bottom: 50px;
 }
 
-.textbox > .arrow {
-  color: red;
-  margin: 0px;
-  display: inline;
-}
 
 .textbox h1, .projectbox h1 {
   background-color: rgb(220,220,220);
 }
+
 .version {
   color: rgb(120,120,120);
   font-size: 40%;
