@@ -46,8 +46,7 @@ function fadeIn(element, finished) {
 }
 
 function change(elemindx, contents, indx) {
-  changeElem = $('.text:eq(' + elemindx + ')')
-  console.log($('.text:eq(' + elemindx + ')'))
+  changeElem = $('.text-content').eq(0);
   //changeElem = document.getElementsByClassName('text-content')[elemindx];
   changeElem.fadeOut(400, function() {
     changeElem.text(contents[indx]);
