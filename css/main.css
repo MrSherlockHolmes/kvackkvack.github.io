@@ -66,7 +66,7 @@ p, h1, h3 {
   font-weight: 700;
   margin-left: 10px;
   float: left;
-  width: 15px;
+  width: auto;
 }
 
 #title #current {
