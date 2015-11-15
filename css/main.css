@@ -20,7 +20,7 @@ p, h1 {
 }
 
 .arrow {
-  display: inline-block;
+  display: inline;
 }
 .version {
   color: rgb(120,120,120);
