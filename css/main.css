@@ -38,6 +38,13 @@ p, h1 {
   color: rgb(120,120,120);
 }
 
+.textbox ::after {
+	content: ">";
+}
+
+.textbox::before {
+	content: "<";
+}
 #current {
   font-weight: 900;
 }
