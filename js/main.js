@@ -2,6 +2,7 @@ var content = ["My name is Arthur. I prefer not to give out my last name. Online
 "This is the second page of this post."]
 var current = 0;
 var change;
+console.log("k");
 
 setInterval(1000*3.5, function() {
   console.log("working");
