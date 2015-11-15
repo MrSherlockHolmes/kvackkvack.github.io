@@ -38,8 +38,9 @@ p, h1 {
   color: rgb(120,120,120);
 }
 
-#current {
-  font-weight: 900;
+#title #current {
+  font-weight: bold;
+  color: rgb(45,30,15);
 }
 
 #title a {
