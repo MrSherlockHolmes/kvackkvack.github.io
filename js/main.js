@@ -15,7 +15,7 @@ function changeContents() {
   fadeOut(change, function() {
     change.innerHTML = content[current];
     change = document.getElementsByClassName('indexnav')[0];
-    change.innerHTML = current + "/" + current.length;
+    change.innerHTML = current + "/" + content.length;
     fadeIn(change, function() {
     })
   });
