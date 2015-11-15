@@ -4,6 +4,7 @@ var current = 0;
 var change;
 
 setInterval(1000*3.5, function() {
+  console.log("working");
   current++;
   if(current>1) {
     current=0;
