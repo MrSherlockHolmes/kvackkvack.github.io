@@ -10,6 +10,6 @@ function changeContents() {
   if(current>1) {
     current=0;
   }
-  change = document.getElementsByClassName('txt-content')[0];
+  change = document.getElementsByClassName('text-content')[0];
   change.innerHTML = content[current];
 }
