@@ -6,6 +6,7 @@
   var op, timer;
   var maintimer;
   var elements;
+  console.log("latest0");
   
   maintimer = setInterval(changeContents, 1000*6)
   
@@ -46,6 +47,7 @@
   }
   
   function change(elemindx, contents, indx) {
+    console.log("change");
     changeElem = document.getElementsByClassName('text-content')[elemindx];
     fadeOut(changeElem, function() {
       changeElem.innerHTML = contents[indx];
@@ -82,6 +84,7 @@
   }
   
   function changeContents() {
+    console.log("change contents");
     current++;
     if(current>1) {
       current=0;
