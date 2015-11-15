@@ -7,7 +7,9 @@ p, h1, h3 {
   font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
 
-
+.prev, .next:hover {
+  cursor: pointer;
+}
 .textbox, .projectbox  {
   display: inline-block;
   border-style: dotted;
