@@ -46,13 +46,15 @@ function fadeIn(element, finished) {
 }
 
 function change(elemindx, contents, indx) {
-  changeElem = document.getElementsByClassName('text-content')[elemindx];
+  changeElem = $('.text-content')[elemindx]
+  //changeElem = document.getElementsByClassName('text-content')[elemindx];
   changeElem.fadeOut(400, function() {
-    changeElem.innerHTML = contents[indx];
+    changeElem.replaceWith(contents[indx]);
     changeElem.fadeIn(400, function() {
       maintimer = setInterval(changeContents, 1000*6);
-      changeElem = document.getElementsByClassName('indexnav')[elemindx];
-      changeElem.innerHTML = "<span class=\"prev\"> < </span>" + String(indx+1) + "/" + String(contents.length) + "<span class=\"next\"> > </span>";
+      //changeElem = document.getElementsByClassName('indexnav')[elemindx];
+      changeElem = $('.indexnav')[elemindx]
+      changeElem.replaceWith("<span class=\"prev\"> < </span>" + String(indx+1) + "/" + String(contents.length) + "<span class=\"next\"> > </span>");
       document.getElementsByClassName('next')[elemindx].onclick = function() {
         next(elemindx);
       }
