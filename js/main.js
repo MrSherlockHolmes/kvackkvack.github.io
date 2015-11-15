@@ -21,7 +21,7 @@ function changeContents() {
     change.innerHTML = contents[indx];
     fadeIn(change, function() {
       change = document.getElementsByClassName('indexnav')[elemindx];
-      change.innerHTML = "< " + String(indx+1) + "/" + String(contents.length) + " >";
+      change.innerHTML = "<span style=\"color: red\"> < </span>" + String(indx+1) + "/" + String(contents.length) + " >";
     })
   });
   }
