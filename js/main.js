@@ -24,6 +24,8 @@ function change(elemindx, contents, indx) {
   changeElem.fadeOut(400, function() {
     changeElem.text(contents[indx]);
     changeElem.fadeIn(400, function() {
+      changeElem = $('.indexnav').eq(elemindx);
+      changeElem.replaceWith("<h3 class=\"indexnav\">" + String(indx+1) + "/" + String(contents.length) + "</h3>");
     })
   })
 }
