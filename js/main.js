@@ -33,7 +33,6 @@ function change(elemindx, contents, indx) {
   changeElem.fadeOut(400, function() {
     changeElem.text(contents[indx]);
     changeElem.fadeIn(400, function() {
-      maintimer = setInterval(mainloop, 1000*6);
       //changeElem = document.getElementsByClassName('indexnav')[elemindx];
       changeElem = $('.indexnav').eq(elemindx);
       changeElem.replaceWith("<h3><span class=\"prev\"> < </span>" + String(indx+1) + "/" + String(contents.length) + "<span class=\"next\"> > </span></h3>");
