@@ -25,6 +25,10 @@ p, h1 {
   margin: 0px;
   display: inline;
 }
+
+.textbox h1, .projectbox h1 {
+  background-color: rgb(220,220,220);
+}
 .version {
   color: rgb(120,120,120);
   font-size: 40%;
