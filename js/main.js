@@ -21,7 +21,7 @@ function changeContents() {
     change.innerHTML = contents[indx];
     fadeIn(change, function() {
       change = document.getElementsByClassName('indexnav')[elemindx];
-      change.innerHTML = "<span id=\"prev\"> < </span>" + String(indx+1) + "/" + String(contents.length) + "<span id=\"next\"> > </span>";
+      change.innerHTML = "<span class=\"prev\"> < </span>" + String(indx+1) + "/" + String(contents.length) + "<span class=\"next\"> > </span>";
     })
   });
   }
