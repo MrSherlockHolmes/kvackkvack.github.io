@@ -19,17 +19,18 @@ function changeContents() {
   function change(elemindx, contents, indx) {
     change = document.getElementsByClassName('text-content')[elemindx];
     fadeOut(change, function() {
-    change.innerHTML = contents[indx];
-    fadeIn(change, function() {
-      change = document.getElementsByClassName('indexnav')[elemindx];
-      change.innerHTML = "<span class=\"prev\"> < </span>" + String(indx+1) + "/" + String(contents.length) + "<span class=\"next\"> > </span>";
-      document.getElementsByClassName('next')[elemindx].onclick = function() {
-        console.log("next!");
-      }
-      document.getElementsByClassName('prev')[elemindx].onclick = function() {
-        console.log("prev!");
-      }
-    })
+      change.innerHTML = contents[indx];
+      fadeIn(change, function() {
+        maintimer = setInterval(changeContents, 1000*6);
+        change = document.getElementsByClassName('indexnav')[elemindx];
+        change.innerHTML = "<span class=\"prev\"> < </span>" + String(indx+1) + "/" + String(contents.length) + "<span class=\"next\"> > </span>";
+        document.getElementsByClassName('next')[elemindx].onclick = function() {
+          next();
+        }
+        document.getElementsByClassName('prev')[elemindx].onclick = function() {
+          prev();
+        }
+      })
   });
   }
   function fadeOut(element, finished) {
@@ -61,10 +62,28 @@ function changeContents() {
 
 window.onload = function() {
   document.getElementsByClassName('next')[0].onclick = function() {
-    console.log("next!");
+    next();
   }
     
   document.getElementsByClassName('prev')[0].onclick = function() {
-    console.log("prev!");
+    prev();
   }
+}
+
+function next() {
+  console.log("next!");
+  current++;
+  if(current>1) {
+    current=0;
+  }
+  change(elemindx, content[elemindx], current);
+}
+
+function prev() {
+  console.log("prev!");
+  current--;
+  if(current<0) {
+    current=1;
+  }
+  change(elemindx, content[elemindx], current);
 }
