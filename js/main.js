@@ -18,7 +18,6 @@ function changeContents() {
     console.log(change.childNodes[i]);
   }
   change.removeChild(change.childNodes[3]);
-  change.removeChild(change.childNodes[2]);
   replace = document.createElement('p');
   replace.appendChild(document.createTextNode("Hi! :)"));
   change.appendChild(replace);
