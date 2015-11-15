@@ -2,23 +2,14 @@ var content = ["My name is Arthur. I prefer not to give out my last name. Online
 "This is the second page of this post."]
 var current = 0;
 var change, replace;
-console.log("k");
 
 setInterval(changeContents, 1000*3.5)
 
 function changeContents() {
-  console.log("working");
   current++;
   if(current>1) {
     current=0;
   }
-  change = document.getElementById('hi');
-  console.log(change.childNodes.length);
-  for(i=0;i<change.childNodes.length;i++) {
-    console.log(change.childNodes[i]);
-  }
-  change.removeChild(change.childNodes[3]);
-  replace = document.createElement('p');
-  replace.appendChild(document.createTextNode("Hi! :)"));
-  change.appendChild(replace);
+  change = document.getElementById('hi').childNodes[2];
+  change.innerHTML = content[current];
 }
