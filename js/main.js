@@ -16,31 +16,6 @@ function changeContents() {
   
   change(0, content[0], current);
   
-  function fadeOut(element, finished) {
-    op = 1;
-    timer = setInterval(function() {
-      if(op < 0.1) {
-        clearInterval(timer);
-        finished();
-      }
-      element.style.opacity = op;
-      element.style.filter = 'alpha(opacity=' + op * 100 + ")";
-      op-=0.1;
-    }, 75)
-  }
-  
-  function fadeIn(element, finished) {
-    op = 0.1;
-    timer = setInterval(function() {
-      if(op >= 1) {
-        clearInterval(timer);
-        finished();
-      }
-      element.style.opacity = op;
-      element.style.filter = 'alpha(opacity=' + op * 100 + ")";
-      op+=0.1;
-    }, 75)
-  }
 }
 
 window.onload = function() {
@@ -51,6 +26,32 @@ window.onload = function() {
   document.getElementsByClassName('prev')[0].onclick = function() {
     prev(0);
   }
+}
+
+function fadeOut(element, finished) {
+  op = 1;
+  timer = setInterval(function() {
+    if(op < 0.1) {
+      clearInterval(timer);
+      finished();
+    }
+    element.style.opacity = op;
+    element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+    op-=0.1;
+  }, 75)
+}
+  
+function fadeIn(element, finished) {
+  op = 0.1;
+  timer = setInterval(function() {
+    if(op >= 1) {
+      clearInterval(timer);
+      finished();
+    }
+    element.style.opacity = op;
+    element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+    op+=0.1;
+  }, 75)
 }
 
 function change(elemindx, contents, indx) {
@@ -70,6 +71,7 @@ function change(elemindx, contents, indx) {
       })
   });
 }
+
 function next(indx) {
   console.log("next!");
   current++;
