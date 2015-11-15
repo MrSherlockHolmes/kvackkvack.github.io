@@ -10,6 +10,7 @@ var elements;
 maintimer = setInterval(mainloop, 1000*6)
 
 function mainloop() {
+  console.log("main");
   current++;
   if(current>1) {
     current=0;
@@ -18,13 +19,14 @@ function mainloop() {
   }
   change(0, content[0], current);
 }
+
 window.onload = function() {
-  $('.next').eq(0).onclick = function() {
-    next(0);
-  }
-  $('.prev').eq(0).onclick = function() {
-    prev(0);
-  }
+  $('.next').eq(elemindx).click(function() {
+    next(elemindx);
+  });
+  $('.prev').eq(elemindx).click(function() {
+    prev(elemindx);
+  });
 }
 
 function change(elemindx, contents, indx) {
@@ -36,12 +38,12 @@ function change(elemindx, contents, indx) {
       //changeElem = document.getElementsByClassName('indexnav')[elemindx];
       changeElem = $('.indexnav').eq(elemindx);
       changeElem.replaceWith("<h3 class=\"indexnav\"><span class=\"prev\"> < </span>" + String(indx+1) + "/" + String(contents.length) + "<span class=\"next\"> > </span></h3>");
-      $('.next').eq(elemindx).onclick = function() {
+      $('.next').eq(elemindx).click(function() {
         next(elemindx);
-      }
-      $('.prev').eq(elemindx).onclick = function() {
+      });
+      $('.prev').eq(elemindx).click(function() {
         prev(elemindx);
-      }
+      });
     })
   })
 }
