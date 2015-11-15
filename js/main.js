@@ -19,13 +19,9 @@ function changeContents() {
     change = document.getElementsByClassName('text-content')[elemindx];
     fadeOut(change, function() {
     change.innerHTML = contents[indx];
-    window.setTimeout(function() {
+    fadeIn(change, function() {
       change = document.getElementsByClassName('indexnav')[elemindx];
       change.innerHTML = "< " + String(indx+1) + "/" + String(contents.length) + " >";
-    }, 75) 
-    change = document.getElementsByClassName('indexnav')[elemindx];
-    change.innerHTML = "< " + String(indx+1) + "/" + String(contents.length) + " >";
-    fadeIn(change, function() {
     })
   });
   }
