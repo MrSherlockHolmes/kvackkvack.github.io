@@ -54,6 +54,7 @@ function next(indx) {
     current=0;
   }
   change(indx, content[indx], current);
+  maintimer = setInterval(mainloop, 1000*6)
 }
 
 function prev(indx) {
@@ -62,5 +63,6 @@ function prev(indx) {
     current=1;
   }
   change(indx, content[indx], current);
+  maintimer = setInterval(mainloop, 1000*6)
 }
 
