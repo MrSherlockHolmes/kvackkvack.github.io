@@ -88,4 +88,4 @@
     }
     change(0, content[0], current);
   }
-}
+})
