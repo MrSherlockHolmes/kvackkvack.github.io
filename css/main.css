@@ -10,8 +10,8 @@ p, h1, h3 {
 .prev, .next:hover {
   cursor: pointer;
 }
+
 .textbox, .projectbox  {
-  display: inline-block;
   border-style: dotted;
   border-color: rgb(190,190,190);
   border-width: 1px;
@@ -19,7 +19,6 @@ p, h1, h3 {
   box-shadow: 2px 2px 5px rgba(200,200,200,150);
   margin-bottom: 50px;
 }
-
 
 .textbox h1, .projectbox h1 {
   background-color: rgb(235,235,235);
@@ -29,6 +28,7 @@ p, h1, h3 {
   font-size: 70%;
   color: rgb(50,50,50);
 }
+
 .version {
   color: rgb(120,120,120);
   font-size: 40%;
@@ -49,6 +49,19 @@ p, h1, h3 {
 
 .textbox p, .projectbox p {
   color: rgb(120,120,120);
+}
+
+.boxtitle {
+  margin-bottom: 20px;
+  background-color: rgb(230,230,230);
+  border-color: rgb(180,180,180);
+  border-style: dotted;
+  border-width: 2px;
+  box-shadow: 1px 1px 10px rgba(200,200,200,215);
+}
+
+.boxtitle h1 {
+  background-color: rgb(210,210,210);
 }
 
 #title #current {
