@@ -1,4 +1,4 @@
-.projectbox, #title, .projectbox, h1 {
+.textbox > .arrow, #title, .projectbox, h1 {
   margin: 60px auto;
   width: 60%;
 }
