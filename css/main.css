@@ -52,7 +52,7 @@ p, h1, h3 {
 }
 
 .boxtitle {
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   background-color: rgb(230,230,230);
   border-color: rgb(180,180,180);
   border-style: dotted;
@@ -62,6 +62,8 @@ p, h1, h3 {
 
 .boxtitle h1 {
   background-color: rgb(210,210,210);
+  font-size: 80%;
+  font-weight: 700;
 }
 
 #title #current {
