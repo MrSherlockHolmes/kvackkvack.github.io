@@ -7,7 +7,9 @@ var op, timer;
 var maintimer;
 var elements;
 
-maintimer = setInterval(function() {
+maintimer = setInterval(mainloop, 1000*6)
+
+function mainloop() {
   current++;
   if(current>1) {
     current=0;
@@ -15,8 +17,7 @@ maintimer = setInterval(function() {
     current=1;
   }
   change(0, content[0], current);
-}, 1000*6)
-
+}
 window.onload = function() {
   $('.next').eq(0).onclick = function() {
     next(0);
@@ -32,7 +33,7 @@ function change(elemindx, contents, indx) {
   changeElem.fadeOut(400, function() {
     changeElem.text(contents[indx]);
     changeElem.fadeIn(400, function() {
-      maintimer = setInterval(changeContents, 1000*6);
+      maintimer = setInterval(mainloop, 1000*6);
       //changeElem = document.getElementsByClassName('indexnav')[elemindx];
       changeElem = $('.indexnav').eq(elemindx);
       changeElem.replaceWith("<span class=\"prev\"> < </span>" + String(indx+1) + "/" + String(contents.length) + "<span class=\"next\"> > </span>");
