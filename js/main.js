@@ -15,11 +15,12 @@ function changeContents() {
   fadeOut(change);
   change.innerHTML = content[current];
   
-  function fadeOut(element) {
+  function fadeOut(element, finished) {
     op = 1;
     timer = setInterval(function() {
       if(op < 0.1) {
         clearInterval(timer);
+        finished();
       }
       element.style.opacity = op;
       element.style.filter = 'alpha(opacity=' + op * 100 + ")";
@@ -27,7 +28,7 @@ function changeContents() {
     }, 75)
   }
   
-  function fadeIn() {
+  function fadeIn(element, finished) {
     op = 0.1;
     timer = setInterval(function() {
       if(op >= 1) {
