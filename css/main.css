@@ -6,8 +6,12 @@ p, h1 {
   font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
 
+.textboxfull {
+  margin-bottom: 50px;
+}
+
 .textbox, .projectbox  {
-  display: inline;
+  display: inline-block;
   border-style: dotted;
   border-color: rgb(190,190,190);
   border-width: 1px;
@@ -15,6 +19,9 @@ p, h1 {
   box-shadow: 2px 2px 5px rgba(200,200,200,150);
 }
 
+.arrow {
+  display: inline-block;
+}
 .version {
   color: rgb(120,120,120);
   font-size: 40%;
@@ -35,11 +42,6 @@ p, h1 {
 
 .textbox p, .projectbox p {
   color: rgb(120,120,120);
-}
-
-.arrow {
-  display: inline;
-  margin-bottom: 50px;
 }
 
 #title #current {
