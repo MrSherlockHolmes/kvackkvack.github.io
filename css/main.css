@@ -58,16 +58,16 @@ p, h1, h3 {
   border-style: dotted;
   border-width: 1px;
   box-shadow: 1px 1px 10px rgba(200,200,200,215);
-  height: 40px;
+  height: 35px;
 }
 
 .boxtitle h1 {
   background-color: rgb(230,230,230);
   font-size: 90%;
   font-weight: 700;
-  margin-left: 10px;
+  margin-left: 20px;
   float: left;
-  width: auto;
+  width: 100%;
 }
 
 #title #current {
