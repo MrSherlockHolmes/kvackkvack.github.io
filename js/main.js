@@ -47,9 +47,9 @@ function fadeIn(element, finished) {
 
 function change(elemindx, contents, indx) {
   changeElem = document.getElementsByClassName('text-content')[elemindx];
-  fadeOut(changeElem, function() {
+  changeElem.fadeOut(400, function() {
     changeElem.innerHTML = contents[indx];
-    fadeIn(changeElem, function() {
+    changeElem.fadeIn(400, function() {
       maintimer = setInterval(changeContents, 1000*6);
       changeElem = document.getElementsByClassName('indexnav')[elemindx];
       changeElem.innerHTML = "<span class=\"prev\"> < </span>" + String(indx+1) + "/" + String(contents.length) + "<span class=\"next\"> > </span>";
