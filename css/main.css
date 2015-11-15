@@ -1,9 +1,12 @@
 body {
-  color: red;
   margin: 60px auto;
   width: 60%;
 }
 
+.arrow {
+  margin: none;
+  width: auto;
+}
 p, h1 {
   font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
