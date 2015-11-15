@@ -53,10 +53,12 @@ function changeContents() {
   }
 }
 
-document.getElementsByClassName('next')[0].onclick = function() {
-  console.log("next!");
-}
-  
-document.getElementsByClassName('prev')[0].onclick = function() {
-  console.log("prev!");
+window.onload = function() {
+  document.getElementsByClassName('next')[0].onclick = function() {
+    console.log("next!");
+  }
+    
+  document.getElementsByClassName('prev')[0].onclick = function() {
+    console.log("prev!");
+  }
 }
