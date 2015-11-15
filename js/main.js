@@ -36,7 +36,7 @@ function change(elemindx, contents, indx) {
       maintimer = setInterval(mainloop, 1000*6);
       //changeElem = document.getElementsByClassName('indexnav')[elemindx];
       changeElem = $('.indexnav').eq(elemindx);
-      changeElem.replaceWith("<span class=\"prev\"> < </span>" + String(indx+1) + "/" + String(contents.length) + "<span class=\"next\"> > </span>");
+      changeElem.replaceWith("<h3><span class=\"prev\"> < </span>" + String(indx+1) + "/" + String(contents.length) + "<span class=\"next\"> > </span></h3>");
       $('.next').eq(elemindx).onclick = function() {
         next(elemindx);
       }
