@@ -64,6 +64,9 @@ p, h1, h3 {
   background-color: rgb(230,230,230);
   font-size: 90%;
   font-weight: 700;
+  margin-left: 10px;
+  float: left;
+  width: 15px;
 }
 
 #title #current {
