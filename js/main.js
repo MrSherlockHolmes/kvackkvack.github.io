@@ -12,8 +12,11 @@ function changeContents() {
     current=0;
   }
   change = document.getElementsByClassName('text-content')[0];
-  fadeOut(change);
-  change.innerHTML = content[current];
+  fadeOut(change, function() {
+    change.innerHTML = content[current];
+    fadeIn(change, function() {
+    })
+  });
   
   function fadeOut(element, finished) {
     op = 1;
@@ -33,6 +36,7 @@ function changeContents() {
     timer = setInterval(function() {
       if(op >= 1) {
         clearInterval(timer);
+        finished();
       }
       element.style.opacity = op;
       element.style.filter = 'alpha(opacity=' + op * 100 + ")";
