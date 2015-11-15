@@ -13,7 +13,7 @@ function changeContents() {
     current=0;
   }
   change = document.getElementById('hi');
-  change.removeChild(change.childNodes[2]);
+  change.removeChild(change.childNodes[3]);
   replace = document.createElement('p');
   replace.appendChild(document.createTextNode("Hi! :)"));
   change.appendChild(replace);
