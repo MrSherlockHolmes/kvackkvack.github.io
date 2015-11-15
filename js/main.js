@@ -35,7 +35,7 @@ function change(elemindx, contents, indx) {
     changeElem.fadeIn(400, function() {
       //changeElem = document.getElementsByClassName('indexnav')[elemindx];
       changeElem = $('.indexnav').eq(elemindx);
-      changeElem.replaceWith("<h3><span class=\"prev\"> < </span>" + String(indx+1) + "/" + String(contents.length) + "<span class=\"next\"> > </span></h3>");
+      changeElem.replaceWith("<h3 class=\"indexnav\"><span class=\"prev\"> < </span>" + String(indx+1) + "/" + String(contents.length) + "<span class=\"next\"> > </span></h3>");
       $('.next').eq(elemindx).onclick = function() {
         next(elemindx);
       }
