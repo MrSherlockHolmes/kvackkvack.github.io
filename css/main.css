@@ -1,4 +1,4 @@
-body:not(.arrow) {
+body:not(.textboxfull) {
   margin: 60px auto;
   width: 60%;
 }
