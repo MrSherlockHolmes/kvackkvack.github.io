@@ -48,7 +48,7 @@ function fadeIn(element, finished) {
 function change(elemindx, contents, indx) {
   changeElem = $('.text-content')[elemindx]
   //changeElem = document.getElementsByClassName('text-content')[elemindx];
-  changeElem.fadeOut(400, function() {
+  $('.text-content')[elemindx].fadeOut(400, function() {
     changeElem.replaceWith(contents[indx]);
     changeElem.fadeIn(400, function() {
       maintimer = setInterval(changeContents, 1000*6);
