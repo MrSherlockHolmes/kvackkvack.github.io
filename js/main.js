@@ -12,7 +12,7 @@ function changeContents() {
   if(current>1) {
     current=0;
   }
-  change = document.getElementById('hi').childNodes()[1];
+  change = document.getElementById('hi').childNodes[1];
   change.appendChild(document.createTextNode(content[current]));
   
 }
