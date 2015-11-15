@@ -7,7 +7,7 @@ var op, timer;
 var maintimer;
 var elements;
 
-maintimer = setInterval(mainloop, 1000*6)
+setInterval(mainloop, 1000*6)
 
 function mainloop() {
   current++;
@@ -20,7 +20,6 @@ function mainloop() {
 }
 
 function change(elemindx, contents, indx) {
-  resetNav2(elemindx, function() {}, function() {})
   changeElem = $('.text-content').eq(elemindx);
   changeElem.fadeOut(400, function() {
     changeElem.text(contents[indx]);
