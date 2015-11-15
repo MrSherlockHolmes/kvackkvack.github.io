@@ -1,12 +1,14 @@
-var content = ["My name is Arthur. I prefer not to give out my last name. Online, I call myself kvackkvack.  I prefer not to give out my password.",
-"I'm a 12 year old boy. I love programming. I like a lot of things. I dislike about the same amount of things. I made this website, mostly to host any JS projects I decide to make."]
-var current = 0;
-var change, replace;
-var op, timer;
 
-setInterval(changeContents, 1000*6)
+
+maintimer = setInterval(changeContents, 1000*6)
 
 function changeContents() {
+  var content = ["My name is Arthur. I prefer not to give out my last name. Online, I call myself kvackkvack.  I prefer not to give out my password.",
+  "I'm a 12 year old boy. I love programming. I like a lot of things. I dislike about the same amount of things. I made this website, mostly to host any JS projects I decide to make."]
+  var current = 0;
+  var change, replace;
+  var op, timer;
+  var maintimer;
   current++;
   if(current>1) {
     current=0;
@@ -16,7 +18,7 @@ function changeContents() {
     change.innerHTML = content[current];
     fadeIn(change, function() {
       change = document.getElementsByClassName('indexnav')[0];
-      change.innerHTML = current+1 + "/" + content.length;
+      change.innerHTML = "< " + current+1 + "/" + content.length + " >";
     })
   });
   
