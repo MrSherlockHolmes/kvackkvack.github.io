@@ -1,4 +1,4 @@
-(function() {
+window.onload = function() {
   var content = [["My name is Arthur. I prefer not to give out my last name. Online, I call myself kvackkvack.  I prefer not to give out my password.",
   "I'm a 12 year old boy. I love programming. I like a lot of things. I dislike about the same amount of things. I made this website, mostly to host any JS projects I decide to make."]]
   var current = 0;
@@ -91,4 +91,4 @@
     }
     change(0, content[0], current);
   }
-})
+}
