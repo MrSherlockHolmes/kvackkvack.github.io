@@ -5,7 +5,6 @@ var change, replace;
 var op, timer;
 var maintimer;
 var elements;
-var loaded = false;
 
 maintimer = setInterval(changeContents, 1000*6)
 
@@ -51,19 +50,5 @@ function changeContents() {
       element.style.filter = 'alpha(opacity=' + op * 100 + ")";
       op+=0.1;
     }, 75)
-  }
-}
-
-window.onload = function() {
-  loaded = true;
-}
-
-if(loaded) {
-  document.getElementsByClassName('next')[0].onclick = function() {
-    console.log("next!");
-  }
-  
-  document.getElementsByClassName('prev')[0].onclick = function() {
-    console.log("prev!");
   }
 }
