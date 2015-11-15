@@ -26,4 +26,16 @@ function changeContents() {
       op-=0.1;
     }, 75)
   }
+  
+  function fadeIn() {
+    op = 0.1;
+    timer = setInterval(function() {
+      if(op >= 1) {
+        clearInterval(timer);
+      }
+      element.style.opacity = op;
+      element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+      op+=0.1;
+    }, 75)
+  }
 }
