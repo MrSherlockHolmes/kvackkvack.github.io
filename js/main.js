@@ -4,7 +4,9 @@ var current = 0;
 var change;
 console.log("k");
 
-setInterval(1000*3.5, function() {
+setInterval(1000*3.5, changeContents)
+
+function changeContents() {
   console.log("working");
   current++;
   if(current>1) {
@@ -12,4 +14,4 @@ setInterval(1000*3.5, function() {
   }
   change = document.getElementById('hi');
   change.innerHTML = content[current];
-})
+}
