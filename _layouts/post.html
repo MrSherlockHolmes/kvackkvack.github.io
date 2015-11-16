@@ -1,0 +1,13 @@
+---
+layout: default
+---
+<div class="boxtitle"><h1>{{ page.title }}<span class="meta" style="font-size: 75%"> at {{ page.date | date_to_string }}</span></h1></div>
+
+<div class="textbox">
+  <h1>{{ page.title }}</h1>
+  <p>{{ content }}</p>
+</div>
+
+<div class="notecomments">
+  {% include disqus.html %}	 
+</div>

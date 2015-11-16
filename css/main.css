@@ -7,10 +7,6 @@ p, h1, h3 {
   font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
 
-.prev, .next:hover {
-  cursor: pointer;
-}
-
 .textbox, .projectbox  {
   border-style: dotted;
   border-color: rgb(190,190,190);
@@ -53,12 +49,17 @@ p, h1, h3 {
 
 .boxtitle {
   margin-bottom: 50px;
+  opacity: 0.5;
   background-color: rgb(240,240,240);
   border-color: rgb(180,180,180);
   border-style: dotted;
   border-width: 1px;
   box-shadow: 1px 1px 10px rgba(200,200,200,215);
   height: 35px;
+}
+
+.boxtitle:hover {
+  opacity: 1;
 }
 
 .boxtitle h1 {
@@ -68,6 +69,20 @@ p, h1, h3 {
   margin-left: 30px;
   float: left;
   width: calc(100%-20px);
+}
+
+footer {
+  border-top: 1px solid rgb(220,220,220);
+}
+
+footer p {
+  font-style: italic;
+  color: rgb(120,120,120);
+}
+
+footer a {
+  text-decoration: none;
+  color: rgb(60,60,60);
 }
 
 #title #current {
@@ -81,12 +96,37 @@ p, h1, h3 {
   font-style: italic;
 }
 
+#navbar {
+  border-bottom: 1px solid rgb(220,220,220);
+  margin-bottom: 50px
+}
+
 .textbox a {
   text-decoration: none;
   color: rgb(210,155,110);
   font-style: italic;
 }
 
+.small {
+  font-size: 70%;
+  font-weight: 550;
+}
+
+.posttitle {
+  text-decoration: none;
+  color: rgb(40,40,40);
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
+.postdate {
+   font-size: 60%;
+   color: rgb(100,100,100);
+}
+
+li {
+  list-style-type:none;
+}
 .textbox a:hover {
   text-decoration: underline;
 }
