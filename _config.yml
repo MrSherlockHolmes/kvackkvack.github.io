@@ -1,5 +1,5 @@
 
 title: kvackkvack
-url: "http://localhost:4000" # the base hostname & protocol for your site
+url: "kvackkvack.github.io"
 markdown: kramdown
 permalink: /blog/:year/:title
