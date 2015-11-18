@@ -7,3 +7,11 @@ a {
   color: grey;
   text-decoration: none;
 }
+
+a:hover {
+  color: rgb(200,200,200);
+}
+
+html, body {
+  overflow: hidden;
+}

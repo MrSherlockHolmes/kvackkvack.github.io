@@ -10,10 +10,25 @@ title: projects
 
 <body>
   <div class="boxtitle">
-    <h1>   Projects</h1>
+    <h1>Projects On This Site</h1>
   </div>
-  <div class="projectbox">
-    <h1><a href="/projects/htmlproject">Test JS Project Using P Elements <span class="version">v0.1 beta</span></a></h1>
-    <p>A JS game where pretty much everything is displayed using HTML p- and h1-like elements.</p>
+  {% for post in site.posts %}
+	{% if post.category == 'project-this' %}
+	  <div class="projectbox">
+		<h1><a href={{ post.link }}>{{ post.title}} <span class="version">{{ post.version }}</span></a></h1>
+		<p>{{ post.content }}</p>
+	  </div>
+	{% endif %}
+  {% endfor %}
+  <div class="boxtitle">
+    <h1>Projects From Other Sites</h1>
   </div>
+  {% for post in site.posts %}
+	{% if post.category == 'project-other' %}
+	  <div class="projectbox">
+		<h1><a href={{ post.link }}>{{ post.title}} <span class="version">{{ post.version }}</span></a></h1>
+		<p>{{ post.content }}</p>
+	  </div>
+	{% endif %}
+  {% endfor %}
 </body>
