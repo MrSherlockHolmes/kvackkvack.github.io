@@ -1,0 +1,188 @@
+.clickable:hover{
+  cursor: pointer;
+}
+
+footer {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+div {
+  background-color: rgb(247,247,247);
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-left: 1px solid rgb(80,80,80);
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+  position: relative;
+}
+
+.dark-mode div {
+  background-color: rgb(8,8,8);
+}
+
+#navbar a {
+  padding: 10px;
+}
+div:not(#cookies):before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 40px;
+  border-bottom: 1px solid rgb(80,80,80);
+}
+
+div:not(#cookies):after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: calc(100% - 2px);
+  height: 1px;
+  width: 40px;
+  border-top: 1px solid rgb(80,80,80);
+}
+
+body > div:not(#cookies):before, body > div:not(#cookies):after {
+  width: 85%;
+}
+
+.projectbox h1 {
+  border: 1px solid rgb(80,80,80);
+  border-right: 0px solid black;
+  width: 85%;
+  padding: 5px;
+  padding-left: 10px;
+  background-color: rgb(245,245,245);
+}
+
+.dark-mode .projectbox h1 {
+  background-color: rgb(10,10,10);
+}
+
+.version {
+  color: rgb(177,177,177);
+  font-size: 16px;
+  font-style: italic;
+  padding-left: 4px;
+}
+
+div p, div h1 , div h3{
+  margin-left: 15px;
+}
+
+.boxtitle > * {
+  margin-left: 22px;
+}
+
+.dark-mode {
+  background-color: black;
+}
+
+p, h1, h3 {
+  font-family:'Helvetica', 'Arial', 'Sans-Serif';
+}
+
+.boxtitle {
+  background-image: -o-linear-gradient(left, rgb(225,225,225) 24%, rgb(247,247,247) 62%);
+  background-image: -moz-linear-gradient(left, rgb(225,225,225) 24%, rgb(247,247,247) 62%);
+  background-image: -webkit-gradient(linear, left left, left top, color-stop(0.24, rgb(225,225,225)), color-stop(0.62, rgb(247,247,247)));
+  background-image: -webkit-linear-gradient(left, rgb(225,225,225) 24%, rgb(247,247,247) 62%);
+  background-image: -ms-linear-gradient(left, rgb(225,225,225) 24%, rgb(247,247,247) 62%);
+  background-image: linear-gradient(left, rgb(225,225,225) 24%, rgb(247,247,247) 62%);
+}
+
+.dark-mode .boxtitle {
+  background-image: -o-linear-gradient(left, rgb(20,20,20) 24%, rgb(8,8,8) 62%);
+  background-image: -moz-linear-gradient(left, rgb(20,20,20) 24%, rgb(8,8,87) 62%);
+  background-image: -webkit-gradient(linear, left left, left top, color-stop(0.24, rgb(20,20,20)), color-stop(0.62, rgb(8,8,8)));
+  background-image: -webkit-linear-gradient(left, rgb(20,20,20) 24%, rgb(8,8,8) 62%);
+  background-image: -ms-linear-gradient(left, rgb(20,20,20) 24%, rgb(8,8,8) 62%);
+  background-image: linear-gradient(left, rgb(20,20,20) 24%, rgb(8,8,8) 62%);
+}
+
+.projectbox, .textbox {
+  background-image: -o-linear-gradient(left, rgb(235,235,235) 39%, rgb(247,247,247) 90%);
+  background-image: -moz-linear-gradient(left, rgb(235,235,235) 39%, rgb(247,247,247) 90%);
+  background-image: -webkit-gradient(linear, left left, left top, color-stop(0.39, rgb(235,235,235)), color-stop(0.90, rgb(247,247,247)));
+  background-image: -webkit-linear-gradient(left, rgb(235,235,235) 39%, rgb(247,247,247) 90%);
+  background-image: -ms-linear-gradient(left, rgb(235,235,235) 39%, rgb(247,247,247) 90%);
+  background-image: linear-gradient(left, rgb(235,235,235) 39%, rgb(247,247,247) 90%);
+}
+
+.dark-mode .projectbox, .dark-mode .textbox{
+  background-image: -o-linear-gradient(left, rgb(10,10,10) 24%, rgb(8,8,8) 62%);
+  background-image: -moz-linear-gradient(left, rgb(10,10,10) 24%, rgb(8,8,87) 62%);
+  background-image: -webkit-gradient(linear, left left, left top, color-stop(0.24, rgb(10,10,10)), color-stop(0.62, rgb(8,8,8)));
+  background-image: -webkit-linear-gradient(left, rgb(10,10,10) 24%, rgb(8,8,8) 62%);
+  background-image: -ms-linear-gradient(left, rgb(10,10,10) 24%, rgb(8,8,8) 62%);
+  background-image: linear-gradient(left, rgb(10,10,10) 24%, rgb(8,8,8) 62%);
+}
+
+.dark-mode p, .dark-mode h1, .dark-mode h3 {
+  color: rgb(255,255,255);
+}
+
+.textbox a {
+  text-decoration: none;
+  color: rgb(210,155,110);
+  font-style: italic;
+  font-weight: 660;
+}
+
+.dark-mode .textbox a {
+  color: rgb(45,100,145);
+}
+
+.textbox a:hover {
+  text-decoration: underline;
+}
+
+.small {
+  font-size: 70%;
+  font-weight: 550;
+}
+
+#title a {
+  color: rgb(190,190,190);
+  text-decoration: none;
+  font-style: italic;
+}
+
+footer a {
+  text-decoration: none;
+  color: rgb(60,60,60);
+}
+
+.dark-mode footer a {
+  color: rgb(195,195,195);
+}
+
+.projectbox a {
+  color: rgb(0,0,0);
+  text-decoration: none;
+}
+
+.dark-mode .projectbox a {
+  color: rgb(255,255,255);
+}
+
+li {
+  list-style-type: none;
+}
+
+.boxtitle h1{
+  text-shadow: 6px 1.5px 3px rgba(60,60,60,0.4);
+}
+
+#cookies {
+  background-color: rgb(160,160,160);
+  border-radius: 8px;
+}
+
+.dark-mode #cookies {
+  background-color: rgb(95,95,95);
+}

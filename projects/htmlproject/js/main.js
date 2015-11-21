@@ -47,9 +47,8 @@ function main() {
   }
   
   function touchingGroundPiece(x, y, width, height, piece) {
-	if(x+width/2 > piece.x && x-width/2 < piece.x + piece.width && y+width/2 > piece.y && y-width/2 < piece.y + piece.height) {
+	if(x+width/2 > piece.x && x-width/2 < piece.x + piece.width && y+height/2 > piece.y && y-height/2 < piece.y + piece.height) {
 	  return true;
-	  console.log("pl0x")
 	}
 	return false;
   }
@@ -81,14 +80,37 @@ function main() {
 	}
   }
   
+  var testY, testX, touchingFloor;
   Player.prototype.collisionCheck = function() {
 	if(touchingEdge(this.x+this.xvel, 100, this.self.offsetWidth, 0)) {
 	  this.xvel = 0;
 	}
-	
 	if(touchingGroundPiece(this.x+this.xvel, this.y+this.yvel, this.width, this.height, mainG)) {
-	  this.yvel = 0;
-	  this.xvel = 0;
+	  touchingFloor = false;
+	  if(touchingGroundPiece(this.x+this.xvel, this.y+this.yvel+1, this.width, this.height, mainG)) {
+		touchingFloor = true;
+	  }
+	  
+	  if(touchingGroundPiece(this.x, this.y+this.yvel, this.width, this.height, mainG)) {
+		testY = this.y+this.yvel;
+		while(touchingGroundPiece(this.x, testY, this.width, this.height, mainG)) {
+		  testY+=this.yvel/Math.abs(this.yvel);
+		}
+		this.y = testY+this.yvel/Math.abs(this.yvel)*-1;
+		touchingFloor = true;
+		
+	  } else if(touchingGroundPiece(this.x+this.xvel, this.y, this.width, this.height, mainG)) {
+		testX = this.x+this.xvel;
+		while(touchingGroundPiece(testX, this.y, this.width, this.height, mainG)) {
+		  testX+=this.xvel/Math.abs(this.xvel);
+		}
+		this.y = testY+this.xvel/Math.abs(this.xvel)*-1;
+		this.xvel = 0;
+		
+	  } else {
+		this.yvel = 0;
+		this.xvel = 0;
+	  }
 	}
   }
   
@@ -96,19 +118,27 @@ function main() {
 	posElement(this.self, this.x, Math.max(this.y,38), true);
   }
   
-  Player.prototype.run = function() {
-  	this.width = this.self.offsetWidth;
+  Player.prototype.move = function() {
+	this.width = this.self.offsetWidth;
 	this.height = this.self.offsetHeight;
-	xmove= keys['d'] - keys['a'];
+	xmove = keys['d'] - keys['a'];
+	ymove = +keys['w'];
 	this.yvel-=0.4;
-	this.yvel = Math.min(this.yvel, 5);
 	this.yvel = Math.min(this.yvel, 5);
 	this.xvel+=xmove*8;
 	this.xvel*=0.68;
 	this.death();
 	this.collisionCheck();
+	if(touchingFloor) {
+		this.yvel = ymove*15; 
+		touchingFloor = false;
+	}
 	this.x+=this.xvel;
 	this.y-=this.yvel;
+  }
+  
+  Player.prototype.run = function() {
+    this.move();
 	this.display();
   }
   
@@ -121,10 +151,10 @@ function main() {
 	this.self.style.border = '1px solid rgb(200,200,200)';
 	this.self.style.width = this.width;
 	this.self.style.height = this.height;
-	posElement(this.self, this.x, this.y, true);
+	posElement(this.self, this.x, this.y, false);
   }
   
-  mainG = new GroundPiece(screenWidth/2, screenHeight, screenWidth-40, 80)
+  mainG = new GroundPiece(30,screenHeight-100,screenWidth-60,80);
   /*var ground = addNewElement('div', '');
   ground.style.backgroundColor = 'rgb(245,245,245)';
   ground.style.border = '1px solid rgb(200,200,200)';

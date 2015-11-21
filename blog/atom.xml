@@ -1,0 +1,31 @@
+---
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <p>
+	Hey, if you're viewing this website in Chrome and it's giving you an error:
+	Chrome doesn't know how to display XML. View it in Firefox instead if you really want to. :P
+    </p>
+	<title>kvackkvack | blog</title>
+	<link href="http://kvackkvack.github.io/blog/atom.xml" rel="self"/>
+	<link href="http://kvackkvack.github.io/blog"/>
+	<updated>{{ site.time | date_to_xmlschema }}</updated>
+	<id>http://kvackkvack.github.io/blog</id>
+	<author>
+		<name>kvackkvack</name>
+		<email>friskarthur@gmail.com</email>
+	</author>
+
+	{% for post in site.posts %}
+	    {% if post.category == 'blog-post' %}
+			<entry>
+				<title>{{ post.title }}</title>
+				<link href="http://kvackkvack.github.io{{ post.url }}"/>
+				<updated>{{ post.date | date_to_xmlschema }}</updated>
+				<id>http://kvackkvack.github.io/{{ post.id }}</id>
+				<content type="html">{{ post.content | xml_escape }}</content>
+			</entry>
+		{% endif %}
+	{% endfor %}
+
+</feed>
